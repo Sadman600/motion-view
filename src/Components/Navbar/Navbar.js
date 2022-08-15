@@ -2,15 +2,16 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from "react-router-dom";
 import auth from '../../firebase.init';
-import {signOut } from 'firebase/auth';
+import motionlogo from '../../Assets/images/motionview.png';
+import { signOut } from 'firebase/auth';
 const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
     const logout = () => {
         signOut(auth);
-      };
+    };
     const menuItems = <>
         <li><Link to='/'>Home</Link></li>
-        <li>{user ? <button onClick={logout} class="btn btn-ghost capitalize">Log Out</button>:<Link to='/login'>Login</Link>}</li>
+        <li>{user ? <button onClick={logout} className="btn btn-ghost capitalize">Log Out</button> : <Link to='/login'>Login</Link>}</li>
     </>
     return (
         <div>
@@ -26,7 +27,9 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost normal-case text-xl">Motion View</Link>
+                    <Link to='/' className="btn btn-ghost normal-case text-xl">
+                        <img src={motionlogo} alt=''></img>
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">

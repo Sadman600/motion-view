@@ -7,6 +7,7 @@ import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
 import Checkout from './Pages/Checkout/Checkout';
 import RequireAuth from './Routes/RequireAuth';
+import Footer from './Layouts/Footer/Footer';
 function App() {
   return (
     <div>
@@ -17,6 +18,7 @@ function App() {
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/checkout' element={<RequireAuth><Checkout /></RequireAuth>}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 }

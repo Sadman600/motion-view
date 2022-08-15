@@ -11,8 +11,8 @@ const Cart = ({cart}) => {
                     <input type="text" value={count} className="input input-bordered w-16 max-w-xs" readOnly />
                     <button onClick={() => setCount((count) => count - 1)} className="btn" disabled={count === 1}>-</button>
                 </div>
-                <div class="avatar mx-2">
-                    <div class="w-24 rounded-xl">
+                <div className="avatar mx-2">
+                    <div className="w-24 rounded-xl">
                         <img src={`https://idbdev.com/motion2/public/images/${image}`} alt='product' />
                     </div>
                 </div>

@@ -18,9 +18,9 @@ const Products = () => {
 
     return (
 
-        <div class="hero min-h-screen 0">
+        <div className="hero min-h-screen 0">
 
-            <div class="hero-content flex-col lg:flex-row">
+            <div className="hero-content flex-col lg:flex-row">
 
                 <div className="grid lg:grid-cols-3 gap-5">
                     {

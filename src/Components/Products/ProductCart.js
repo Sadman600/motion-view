@@ -20,7 +20,7 @@ const ProductCart = ({ cartProduct }) => {
             <div>
                 <hr></hr>
                 <h5 className='mb-5 text-2xl text-center font-semibold text-secondary p-5'>Total Price: {total}</h5>
-                <button onClick={() => navigate('/checkout')} className="btn btn-primary btn-wide">Checkout</button>
+                <button onClick={() => navigate('/checkout')} className="btn btn-primary btn-wide text-white">Checkout</button>
             </div>
         </div>
     );
